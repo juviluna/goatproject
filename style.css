@@ -15,21 +15,58 @@
 .navbar{
     width: 85%;
     margin: auto;
-    padding: 35px 0;
+    padding: 60px 0;
     display: flex;
-    align-items: center;
+    align-items: center-left;
     justify-content: space-between;
+    cursor: pointer;
+    font-size: 20px;
 }
+
 
 .navbar ul li{
     list-style: none;
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 145px;
+    position: relative;
    
 }
 
 .navbar ul li a{
-    text-align: right;
     text-decoration: none;
-    color: white;
+    color: #4d4d4d;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #4d4d4d;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    position: center;
+    top: 15px;
+    transform: translateY(75%);
+    text-align: center;
+    color: #4d4d4d;
+}
+
+.about {
+    width: 100%;
+    position: center;
+    top: 50px;
+    transform: translateY(50%);
+    text-align: center;
+    color: #4d4d4d;
 }
